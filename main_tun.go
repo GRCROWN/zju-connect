@@ -148,9 +148,9 @@ func main() {
 		}
 	}
 
-	if !conf.DisableKeepAlive {
-		go service.KeepAlive(vpnResolver)
-	}
+	// if !conf.DisableKeepAlive {
+	// 	go service.KeepAlive(vpnResolver)
+	// }
 
 	quit := make(chan os.Signal)
 	signal.Notify(quit, os.Interrupt, syscall.SIGTERM)
